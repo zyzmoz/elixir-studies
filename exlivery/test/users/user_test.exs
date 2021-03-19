@@ -3,11 +3,13 @@ defmodule Exlivery.Users.UserTest do
 
   alias Exlivery.Users.User
 
+  import Exlivery.Factory
+
   describe "build/5" do
     test "When user informed" do
-      res = User.build("Daniel", "and@email.com", "123456", 18, "Granville Ave, 189")
+      res = User.build("Test", "mail@email.com", "123456", 29, "Granville ave")
 
-      assert res == {:ok, %Exlivery.Users.User{address: "Granville Ave, 189", age: 18, cpf: "123456", email: "and@email.com", name: "Daniel"}}
+      assert res == {:ok, build(:user)}
     end
 
     test "When user not informed" do
