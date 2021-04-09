@@ -23,7 +23,7 @@ defmodule Exlivery.Factory do
     }
   end
 
-  def order_factory do
+  def order_factory() do
     %Order{
       address: "Granville ave",
       user_cpf: "123456",
