@@ -7,7 +7,7 @@ defmodule FlightBooking.Bookings.ReportTest do
   alias FlightBooking.Bookings.Agent, as: BookingAgent
 
   describe "create/1" do
-    setup  do
+    setup do
       BookingAgent.start_link(%{})
 
       :ok
@@ -15,7 +15,7 @@ defmodule FlightBooking.Bookings.ReportTest do
 
     test "create report" do
       :booking
-      |>build()
+      |> build()
       |> BookingAgent.save()
 
       Report.create("report_test.csv")
