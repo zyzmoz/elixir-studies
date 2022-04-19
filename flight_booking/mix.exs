@@ -1,11 +1,11 @@
-defmodule Exlivery.MixProject do
+defmodule FlightBooking.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :exlivery,
+      app: :flight_booking,
       version: "0.1.0",
-      elixir: "~> 1.11",
+      elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       deps: deps()
@@ -23,9 +23,8 @@ defmodule Exlivery.MixProject do
   defp deps do
     [
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
-      {:decimal, "~> 2.0"},
+      {:elixir_uuid, "~> 1.2"},
       {:ex_machina, "~> 2.5.0"},
-      {:elixir_uuid, "~> 1.2"}
     ]
   end
 
